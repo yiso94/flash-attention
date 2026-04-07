@@ -1,0 +1,18 @@
+{
+    "name": "flash-attention-dev",
+    "build": {
+        "dockerfile": "./Dockerfile"
+    },
+    "runArgs": [
+        "--gpus",
+        "all"
+    ],
+    "init": true,
+    "features": {
+        "ghcr.io/devcontainers/features/git:1": {
+            "version": "latest",
+            "ppa": "true"
+        }
+    },
+    "postCreateCommand": "bash .devcontainer/Setup.sh"
+}
